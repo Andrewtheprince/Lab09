@@ -8,7 +8,7 @@ class DAO():
         pass
 
     @staticmethod
-    def getAirports(self):
+    def getAirports():
         conn = DBConnect.get_connection()
         airports = []
         cursor = conn.cursor(dictionary = True)
@@ -21,7 +21,7 @@ class DAO():
         return airports
 
     @staticmethod
-    def getFlights(self):
+    def getFlights():
         conn = DBConnect.get_connection()
         flights = []
         cursor = conn.cursor(dictionary=True)
