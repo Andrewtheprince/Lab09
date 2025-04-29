@@ -22,5 +22,5 @@ class Controller:
         self._view.txt_result.controls.append(ft.Text(f"Sono presenti {numArchi} archi"))
         self._view.txt_result.controls.append(ft.Text(f"Gli archi sono: "))
         for arco in archi:
-            self._view.txt_result.controls.append(ft.Text(arco))
+            self._view.txt_result.controls.append(ft.Text(f"{arco}-{arco.weight()}"))
         self._view.update_page()
