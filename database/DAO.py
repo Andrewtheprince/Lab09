@@ -3,7 +3,7 @@ from model.airport import Airport
 from model.flight import Flight
 
 
-class DAO():
+class DAO:
     def __init__(self):
         pass
 
