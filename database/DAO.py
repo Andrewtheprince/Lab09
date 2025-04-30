@@ -25,7 +25,7 @@ class DAO:
         conn = DBConnect.get_connection()
         flights = []
         cursor = conn.cursor(dictionary=True)
-        query = """SELECT * FROM flight f"""
+        query = """SELECT * FROM flights f"""
         cursor.execute(query)
         for row in cursor:
             flights.append(Flight(**row))

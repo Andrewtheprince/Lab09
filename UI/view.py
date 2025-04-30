@@ -8,7 +8,7 @@ class View(ft.UserControl):
         self._btnAnalizzaAeroporti = None
         self._txtIn = None
         self._page = page
-        self._page.title = "Template application using MVC and DAO"
+        self._page.title = "Flight Manager"
         self._page.horizontal_alignment = 'CENTER'
         self._page.theme_mode = ft.ThemeMode.LIGHT
         self._controller = None

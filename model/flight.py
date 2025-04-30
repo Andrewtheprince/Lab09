@@ -5,24 +5,24 @@ from tkinter import DoubleVar
 
 @dataclass
 class Flight:
-    id: int
-    airline_id: int
-    flight_number: int
-    tail_number: str
-    origin_airport_id: int
-    destination_airport_id: int
-    scheduled_departure_date: datetime
-    departure_delay: DoubleVar
-    elapsed_time: DoubleVar
-    distance: int
-    arrival_date: datetime
-    arrival_delay: DoubleVar
+    ID: int
+    AIRLINE_ID: int
+    FLIGHT_NUMBER: int
+    TAIL_NUMBER: str
+    ORIGIN_AIRPORT_ID: int
+    DESTINATION_AIRPORT_ID: int
+    SCHEDULED_DEPARTURE_DATE: datetime
+    DEPARTURE_DELAY: DoubleVar
+    ELAPSED_TIME: DoubleVar
+    DISTANCE: int
+    ARRIVAL_DATE: datetime
+    ARRIVAL_DELAY: DoubleVar
 
     def __hash__(self):
-        return self.id
+        return self.ID
 
     def __str__(self):
-        return f"{self.id}-{self.airline_id}-{self.flight_number}"
+        return f"{self.ID}-{self.AIRLINE_ID}-{self.FLIGHT_NUMBER}"
 
     def __eq__(self, other):
-        return self.id == other.id
+        return self.ID == other.ID

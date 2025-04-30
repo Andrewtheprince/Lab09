@@ -4,22 +4,22 @@ from tkinter import DoubleVar
 
 @dataclass
 class Airport:
-    id: int
-    iata_code: str
-    airport: str
-    city: str
-    state: str
-    country: str
-    latitude: DoubleVar
-    longitude: DoubleVar
-    timezone_offset: DoubleVar
+    ID: int
+    IATA_CODE: str
+    AIRPORT: str
+    CITY: str
+    STATE: str
+    COUNTRY: str
+    LATITUDE: DoubleVar
+    LONGITUDE: DoubleVar
+    TIMEZONE_OFFSET: DoubleVar
 
     def __hash__(self):
-        return self.id
+        return self.ID
 
     def __str__(self):
-        return f"{self.iata_code}-{self.airport}"
+        return f"{self.IATA_CODE}-{self.AIRPORT}"
 
     def __eq__(self, other):
-        return self.id == other.id
+        return self.ID == other.ID
 

@@ -7,6 +7,7 @@ class Controller:
         self._model = model
 
     def handleAnalizzaAeroporti(self, e):
+        self._view.txt_result.controls.clear()
         distanzaMassima = self._view._txtIn.value
         if distanzaMassima.isdigit():
             distanzaMassima = int(distanzaMassima)
@@ -18,9 +19,9 @@ class Controller:
         numVertici = self._model.getNumNodi()
         numArchi = self._model.getNumArchi()
         archi = self._model.archi()
-        self._view.txt_result.controls.append(ft.Text(f"Sono presenti {numVertici} Nodi"))
+        self._view.txt_result.controls.append(ft.Text(f"Sono presenti {int(numVertici/2)} Nodi"))
         self._view.txt_result.controls.append(ft.Text(f"Sono presenti {numArchi} archi"))
         self._view.txt_result.controls.append(ft.Text(f"Gli archi sono: "))
-        for arco in archi:
-            self._view.txt_result.controls.append(ft.Text(f"{arco}-{arco.weight()}"))
+        for u,v, data in archi(data=True):
+            self._view.txt_result.controls.append(ft.Text(f"{u}-----{v}-----Distanza Media: {data['weight']}"))
         self._view.update_page()
