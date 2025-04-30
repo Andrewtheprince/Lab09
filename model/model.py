@@ -1,3 +1,5 @@
+import time
+
 from database.DAO import DAO
 import networkx as nx
 
